@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import en from '@/locales/en.json'
+import hi from '@/locales/hi.json'
 
 const defaultImpl = VueI18n.prototype.getChoiceIndex
 
@@ -32,7 +32,14 @@ VueI18n.prototype.getChoiceIndex = function(choice, choicesLength) {
 Vue.use(VueI18n)
 
 const dateTimeFormats = {
-  'en': {
+  'hi': {
+    short: {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }
+  },
+  'gu': {
     short: {
       year: 'numeric',
       month: 'short',
@@ -45,26 +52,43 @@ const dateTimeFormats = {
       month: 'short',
       day: 'numeric'
     }
-  }
+  },
+  'en': {
+    short: {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }
+  },
 }
 
 const numberFormats = {
-  'en': {
+  'hi': {
     currency: {
-      style: 'currency', currency: 'USD'
+      style: 'currency', currency: 'INR'
+    }
+  },
+  'gu': {
+    currency: {
+      style: 'currency', currency: 'INR'
     }
   },
   'ru': {
     currency: {
       style: 'currency', currency: 'RUB'
     }
-  }
+  }, 
+  'en': {
+    currency: {
+      style: 'currency', currency: 'USD'
+    }
+  },
 }
 
 export const i18n = new VueI18n({
-  locale: process.env.VUE_APP_I18N_LOCALE || 'en',
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
-  messages: { en },
+  locale: process.env.VUE_APP_I18N_LOCALE || 'hi',
+  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'hi',
+  messages: { hi },
   dateTimeFormats,
   numberFormats
 })
