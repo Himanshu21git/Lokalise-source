@@ -2,8 +2,8 @@ module.exports = {
   runtimeCompiler: true,
   pluginOptions: {
     i18n: {
-      locale: 'hi',
-      fallbackLocale: 'ru',
+      locale: 'en',
+      fallbackLocale: 'hi',
       localeDir: 'locales',
       enableInSFC: false
     }

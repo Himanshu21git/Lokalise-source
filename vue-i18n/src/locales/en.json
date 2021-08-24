@@ -13,5 +13,9 @@
     },
     "about": {
       "welcome": "Welcome to the About page!"
+    },
+    "data": {
+        "sky": "blue",
+        "grass": "green"
     }
   }

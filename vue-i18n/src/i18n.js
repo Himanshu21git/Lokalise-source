@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import hi from '@/locales/hi.json'
+import en from '@/locales/en.json'
 
 const defaultImpl = VueI18n.prototype.getChoiceIndex
 
@@ -88,7 +88,7 @@ const numberFormats = {
 export const i18n = new VueI18n({
   locale: process.env.VUE_APP_I18N_LOCALE || 'hi',
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'hi',
-  messages: { hi },
+  messages: { en },
   dateTimeFormats,
   numberFormats
 })
